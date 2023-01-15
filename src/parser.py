@@ -1,13 +1,14 @@
+# -*- coding: utf-8 -*-
 from StockHistory import StockHistory
 
 
 def parseDataset(dataset: str) -> list[StockHistory]:
-    pass
+    return []
 
 
 def parseDatasets(datasets: list[str]) -> list[StockHistory]:
     stocks = []
     for dataset in datasets:
-        stocks.append(parseDataset(dataset))
+        stocks.extend(parseDataset(dataset))
 
     return stocks
