@@ -2,6 +2,7 @@
 import os
 from parser import parseDatasets
 from util import findElemInList
+from processor import renderStocks
 
 
 dataset_names = os.listdir("stock_market_data")
@@ -20,13 +21,13 @@ def run():
         case 1:
             datasets = dataset_names
         case 2:
-            datasets.append(findElemInList(dataset_names[0]))
+            datasets.append(findElemInList(dataset_names, dataset_names[0]))
         case 3:
-            datasets.append(findElemInList(dataset_names[1]))
+            datasets.append(findElemInList(dataset_names, dataset_names[1]))
         case 4:
-            datasets.append(findElemInList(dataset_names[2]))
+            datasets.append(findElemInList(dataset_names, dataset_names[2]))
         case 5:
-            datasets.append(findElemInList(dataset_names[3]))
+            datasets.append(findElemInList(dataset_names, dataset_names[3]))
         case _:
             raise Exception("Requested a non-existent dataset, somehow...")
 
